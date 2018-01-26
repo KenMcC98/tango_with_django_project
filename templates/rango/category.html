@@ -9,8 +9,8 @@
 	<body>
 		<div>
 			{% if category %}
-				<h1>{{category.name}}</h1>
-				{% if page %}
+				<h1>{{ category.name }}</h1>
+				{% if pages %}
 					<ul>
 					{% for page in pages %}
 						<li><a href="{{ page.url }}">{{ page.title }}</a></li>
