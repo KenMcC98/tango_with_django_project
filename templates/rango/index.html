@@ -1,13 +1,12 @@
-<!DOCTYPE html>
+{% extends 'rango/base.html' %}
 {% load staticfiles %}
 
-<html>
+{% block title_block %}
+	Index
+{% endblock %}
 
-	<head>
-		<title>Rango</title>
-	</head>
 	
-	<body>
+{% block body_block %}
 		<h1> Rango says...</h1>
 		<div>
 			hey there partner!<br />
@@ -18,9 +17,7 @@
 			<ul>
 				{% for category in categories %}
 				<li>
-				<a href="{% url 'show_category' category.slug %"> 
-                    {{ category.name }} 
-                </a>
+					<a href="{% url 'show_category' category.slug %}">{{ category.name }}</a>
 				</li>
 				{% endfor %}
 			</ul>
@@ -42,11 +39,5 @@
             {% endif %}
         </div>
 
-		<div>
-            <a href="/rango/add_category/">Add a New Category</a><br />
-			<a href="/rango/about/">About</a><br />
 			<img src="{% static "images/rango.jpg" %}" alt="Picture of Darth Vader" /> <!-- New Line -->
-		</div>
-	</body>
-	
-</html>
+{% endblock %}
