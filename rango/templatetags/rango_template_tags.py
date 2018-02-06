@@ -9,9 +9,4 @@ def get_category_list(cat=None):
             'act_cat': cat}
 
 
-
-from django import template
-
-from rango.models import Category
-
 	

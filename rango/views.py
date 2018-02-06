@@ -14,7 +14,8 @@ def index(request):
     page_list = Page.objects.order_by('-views')[:5]
     context_dict = {'categories': category_list,
                     'pages': page_list}
-    return render(request, 'rango/index.html', context_dict)
+    response = render(request, 'rango/index.html', context=context_dict)
+    return response
 
 def about(request):
     #print(request.method)
