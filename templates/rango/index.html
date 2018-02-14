@@ -1,48 +1,39 @@
 {% extends "rango/base.html" %}
-{% load staticfiles %}
+ {% load staticfiles %} 
+ {% block title_block %} Index {% endblock %} 
+ {% block body_block %}
+<h1> Rango says...</h1>
+<div>
+	{% if user.is_authenticated %} howdy {{ user.username }}! {% else %} hey there partner! {% endif %}
+	<br />
+</div>
+<div class="row">
+	<div class="lblock">
+		<h3>Most Liked Categories</h3>
+		<!-- <p> -->
+		{% if categories %} {% for category in categories %}
+		<p>
+			<a href="{% url 'show_category' category.slug %}">{{ category.name }}</a>
+		</p>
+		{% endfor %} {% else %}
+		<strong>There are no categories present.</strong>
+		{% endif %}
+		<!-- </p> -->
+	</div>
 
-{% block title_block %}
-	Index
-{% endblock %}
+	<div class="rblock">
+		<h3>Most Viewed Pages</h3>
+		<!-- <p> -->
+		{% if pages %} {% for page in pages %}
+		<p>
+			<a href="{{page.url}}">{{ page.title }}</a>
+		</p>
+		{% endfor %} {% else %}
+		<strong>There are no pages present.</strong>
+		{% endif %}
+		<!-- </p> -->
+	</div>
+</div>
 
-	
-{% block body_block %}
-		<h1> Rango says...</h1>
-		<div>
-			{% if user.is_authenticated %}
-				howdy {{ user.username }}!
-			{% else %}
-				hey there partner!
-			{% endif %}
-			<br />
-		</div>
-		<div>
-            <h3>Most Liked Categories</h3>
-			{% if categories %}
-			<ul>
-				{% for category in categories %}
-				<li>
-					<a href="{% url 'show_category' category.slug %}">{{ category.name }}</a>
-				</li>
-				{% endfor %}
-			</ul>
-			{% else %}
-			<strong>There are no categories present.</strong>
-			{% endif %}
-		</div>
-
-        <div>
-            <h3>Most Viewed Pages</h3>
-            {% if pages %}
-            <ul>
-                {% for page in pages %}
-                <li><a href="{{page.url}}">{{ page.title }}</a></li>
-                {% endfor %}
-            </ul>
-            {% else %}
-                <strong>There are no pages present.</strong>
-            {% endif %}
-        </div>
-
-			<img src="{% static 'images/rango.jpg' %}" alt="Picture of Darth Vader" /> <br />
-{% endblock %}
+<img class="ri"	src="{% static 'images/rango.jpg' %}" alt="Picture of Darth Vader" />
+<br /> {% endblock %}
