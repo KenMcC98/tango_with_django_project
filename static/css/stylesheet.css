@@ -50,6 +50,7 @@ body {
   height: max-content;
   margin: 5%;
   overflow: hidden;
+  min-width: 200px;
   /* display: inline-block; */
 }
 
@@ -72,6 +73,7 @@ body {
   height: max-content;
   margin: auto;
   overflow: hidden;
+  min-width: 200px;
   /* display: inline-block; */
 }
 
