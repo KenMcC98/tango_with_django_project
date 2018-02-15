@@ -6,15 +6,19 @@
 {% endblock %}
 
 {% block body_block %}
+<div class="row">
+<div class="bblock">
 <h1>
 	Login to Rango
 </h1>
 <form id="login_form" method="post" action="{% url 'login' %}">
 	{% csrf_token %}
 	Username: <input type="text" name="username" value="" size="50" />
-	<br />
+	</div>
+	<div class="bblock">
 	Password: <input type="password" name="password" value="" size="50" />
-	<br />
-	<input type="submit" value="submit" />
+	</div>
+	<button class="button" type="submit" value="submit" ><span>Sign In</span></button>
+	</div>
 </form>
 {% endblock %}

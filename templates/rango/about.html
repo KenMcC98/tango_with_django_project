@@ -6,15 +6,19 @@
 {% endblock %}
 
 {% block body_block %}
-<h1> Rango says...</h1>
-<div>
-    here is the about page.<br />
+<div class="row">
+<div class="bblock">
+<h1> Rango says... </h1> 
+<h2>here is the about page.</h2>
 </div>
-<div>
-    This tutorial has been put together by Kenneth McClure<br />
-    Visits: {{ visits }} <br/>
-    <img src="{% static 'images/rango.jpg' %}"  alt="Picture of Darth Vader"/> <br/>
-    <img src="{{MEDIA_URL}}cat.jpg" />
+
+    <div class="bblock">
+    This tutorial has been put together by Kenneth McClure </br>
+    <!-- Visits: {{ visits }} -->
+    </div>
 </div>
+    <img class="ri" src="{% static 'images/rango.jpg' %}"  alt="Picture of Darth Vader"/> <br/>
+    <img class="ri" src="{{MEDIA_URL}}cat.jpg" />
+
 {% endblock %}
 

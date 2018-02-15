@@ -41,7 +41,7 @@ body {
   margin-top: 30px;
 }
 
-.lblock {
+.dblock {
   background-color: #333;
   text-align: center;
   float: left;
@@ -50,6 +50,7 @@ body {
   height: max-content;
   margin: 5%;
   overflow: hidden;
+  /* display: inline-block; */
 }
 
 .rblock {
@@ -63,12 +64,16 @@ body {
   overflow: hidden;
 }
 
-/* .column {
+.bblock {
+  background-color: #333;
   text-align: center;
-  float: left;
-  width: 20%;
-  padding: 40px;
-} */
+  width: 40%;
+  padding: 3%;
+  height: max-content;
+  margin: auto;
+  overflow: hidden;
+  /* display: inline-block; */
+}
 
 .row {
   color: white;
@@ -76,8 +81,30 @@ body {
   padding-left: 3%;
   padding-right: 3%;
   margin: 5%;
+  margin-top: 10%;
   /* border: solid; */
   background: whitesmoke;
+  /* display: flex; */
+}
+
+.row p {
+  margin:auto;
+  padding: 1%;
+  size: 15px;
+  text-align: center;
+}
+
+.row h1, h2{
+  margin: auto;
+  padding: 1%;
+  font-size: 25px;
+  text-align: center;
+}
+
+.row h2{
+  margin: auto;
+  padding: 3%;
+  font-size: 15px;
 }
 
 .row a {
@@ -137,3 +164,68 @@ img.ri {
   color: skyblue;
 }
 
+.button {
+  /* border-radius: 4px; */
+  background-color: #333;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: auto;
+  margin-top: 30px;
+  align-self: center;
+  display: block;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  text-align: center;
+  float: none;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+  color: skyblue;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.bblock {
+  background-color: #333;
+  text-align: center;
+  width: 40%;
+  padding: 3%;
+  height: max-content;
+  margin: auto;
+  overflow: hidden;
+}
+
+input {
+  border: 0px;
+  padding: 10px;
+  width: 80%;
+}
+
+input:focus {
+  background: skyblue;
+}

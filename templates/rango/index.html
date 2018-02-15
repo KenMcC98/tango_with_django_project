@@ -1,14 +1,13 @@
 {% extends "rango/base.html" %}
- {% load staticfiles %} 
- {% block title_block %} Index {% endblock %} 
- {% block body_block %}
-<h1> Rango says...</h1>
-<div>
-	{% if user.is_authenticated %} howdy {{ user.username }}! {% else %} hey there partner! {% endif %}
-	<br />
-</div>
+{% load staticfiles %} 
+{% block title_block %} Index {% endblock %} 
+{% block body_block %}
 <div class="row">
-	<div class="lblock">
+<div class="bblock">
+<h1> Rango says...</h1>
+	<h2>{% if user.is_authenticated %} howdy {{ user.username }}! {% else %} hey there partner! {% endif %}</h2>
+</div>
+	<div class="dblock">
 		<h3>Most Liked Categories</h3>
 		<!-- <p> -->
 		{% if categories %} {% for category in categories %}
@@ -21,7 +20,7 @@
 		<!-- </p> -->
 	</div>
 
-	<div class="rblock">
+	<div class="dblock">
 		<h3>Most Viewed Pages</h3>
 		<!-- <p> -->
 		{% if pages %} {% for page in pages %}

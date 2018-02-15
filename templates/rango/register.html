@@ -6,12 +6,14 @@
 {% endblock %}
 
 {% block body_block %}
+	<div class="row">
+	<div class="bblock">
 	<h1>Register for Rango</h1>
 	{% if registered %}
-		Rango says: <strong>thank you for registering!</strong>
+		<strong>Thank you for registering!</strong>
 		<a href="{% url 'index' %}">Return to the homepage.</a><br />
 	{% else %}
-		Rango says: register here!
+		Register here!
 		<br />
 		<form id="user_form" method="post" action="{% url 'register' %}"
 		enctype="multipart/form-data">
@@ -21,7 +23,9 @@
 		{{ user_form.as_p }}
 		{{ profile_form.as_p }}
 		
-		<input type="submit" name="submit" value="Register" />
+		</div>
+		<button class="button" type="submit" name="submit"><span>Register</span></button>
 		</form>
 	{% endif %}
+	</div>
 {% endblock %}
