@@ -13,10 +13,10 @@
 </h1>
 <form id="login_form" method="post" action="{% url 'login' %}">
 	{% csrf_token %}
-	Username: <input type="text" name="username" value="" size="50" />
+	Username: <br/><input type="text" name="username" value="" size="50" />
 	</div>
 	<div class="bblock">
-	Password: <input type="password" name="password" value="" size="50" />
+	Password: <br/><input type="password" name="password" value="" size="50" />
 	</div>
 	<button class="button" type="submit" value="submit" ><span>Sign In</span></button>
 	</div>

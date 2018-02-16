@@ -16,11 +16,11 @@
 		Register here!
 		<br />
 		<form id="user_form" method="post" action="{% url 'register' %}"
-		enctype="multipart/form-data">
+		enctype="multipart/form-data"></form> 
 		
 		{% csrf_token %}
 		
-		{{ user_form.as_p }}
+		{{ user_form.as_p }} 
 		{{ profile_form.as_p }}
 		
 		</div>

@@ -78,15 +78,15 @@ body {
 }
 
 .row {
-  color: white;
-  padding: 3%;
-  padding-left: 3%;
-  padding-right: 3%;
-  margin: 2%;
-  margin-top: 60px;
-  /* border: solid; */
-  background: whitesmoke;
-  /* display: flex; */
+    color: white;
+    padding: 3%;
+    padding-left: 3%;
+    padding-right: 3%;
+    margin: 2%;
+    margin-top: 60px;
+    /* border: solid; */
+    background: whitesmoke;
+    /* display: flex; */
 }
 
 .row p {
@@ -219,16 +219,6 @@ img.ri {
 .button:hover span:after {
   opacity: 1;
   right: 0;
-}
-
-.bblock {
-  background-color: #333;
-  text-align: center;
-  width: 40%;
-  padding: 3%;
-  height: max-content;
-  margin: auto;
-  overflow: hidden;
 }
 
 input {
