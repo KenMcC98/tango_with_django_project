@@ -82,8 +82,8 @@ body {
   padding: 3%;
   padding-left: 3%;
   padding-right: 3%;
-  margin: 5%;
-  margin-top: 10%;
+  margin: 2%;
+  margin-top: 60px;
   /* border: solid; */
   background: whitesmoke;
   /* display: flex; */
@@ -148,6 +148,15 @@ img.ri {
   width: 80%;
   top: 5%;
   margin: 10%;
+}
+
+.catbar p {
+  margin:auto;
+  margin-top: 30px;
+  padding: 0px;
+  font-size: 25px;
+  color: white;
+  text-align: center;
 }
 
 .catbar a {
