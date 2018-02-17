@@ -96,6 +96,16 @@ body {
   text-align: center;
 }
 
+.row label {
+  display: block;
+  float: none;
+}
+
+.row span {
+  display: block;
+  float: none;
+}
+
 .row h1, h2{
   margin: auto;
   padding: 1%;
